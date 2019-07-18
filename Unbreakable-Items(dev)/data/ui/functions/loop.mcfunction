@@ -1,7 +1,5 @@
 scoreboard players add @a Make_Unbreakable 0
-scoreboard players add @a ui_status 0
 scoreboard players enable @a Make_Unbreakable
-##scoreboard players enable @a ui_status
 
 # Check if 'Make_Unbreakable' triggered [Sets 'ui_status' to 1]
     execute as @a[scores={Make_Unbreakable=1..}] run scoreboard players set @s ui_status 1
