@@ -1,5 +1,5 @@
 #Play sound
-playsound minecraft:item.trident.hit block @s
+execute as @a[scores={Make_Unbreakable=1}] at @s run playsound minecraft:item.trident.hit block @s
 
 #Display fail message
-tellraw @s ["",{"text":"[Unbreakable-Items]","color":"aqua"},{"text":" [Error]","color":"red"},{"text":"\n"},{"text":"Make sure you have at least 50 levels and you're\nholding the item you want to make unbreakable.","italic":true,"color":"yellow"}]
+tellraw @a[scores={Make_Unbreakable=1}] ["",{"text":"[Unbreakable-Items]","color":"aqua"},{"text":" [Error]","color":"red"},{"text":"\n"},{"text":"Make sure you have at least 50 levels and you're\nholding a valid item you want to make unbreakable.","italic":true,"color":"yellow"}]

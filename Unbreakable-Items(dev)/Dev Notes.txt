@@ -1,0 +1,5 @@
+######################<'Make_Unbreakable' Values>######################
+## '1' = Make_Unbreakable has been triggered.                        ##
+## '2' = Player has enough levels & Player is holding a valid item.  ##
+## '3' = Held item is already unbreakable.                           ##
+#######################################################################
