@@ -12,11 +12,9 @@ execute as @a[scores={Make_Unbreakable=2}] run data modify entity @e[type=minecr
 # Change RepairCost
 execute as @a[scores={Make_Unbreakable=2}] run data modify entity @e[type=minecraft:item,nbt={Item:{tag:{new_item:1}}},limit=1] Item.tag.RepairCost set from entity @s SelectedItem.tag.RepairCost
 
-# Replace SelectedItem with 'new_item'
+# Clear SelectedItem
 execute as @a[scores={Make_Unbreakable=2}] run replaceitem entity @s weapon.mainhand minecraft:minecart{tag:{place_holder:1}} 1
-execute as @a[scores={Make_Unbreakable=2}] run give @s minecraft:minecart{tag:{place_holder:0}} 35
 execute as @a[scores={Make_Unbreakable=2}] run clear @s minecraft:minecart{tag:{place_holder:1}}
-execute as @a[scores={Make_Unbreakable=2}] run tp @e[nbt={Item:{tag:{new_item:1}}}] ~ ~ ~
 
 # Discard 'new_item' tag
 execute as @a[scores={Make_Unbreakable=2}] run data modify entity @e[type=minecraft:item,nbt={Item:{tag:{new_item:1}}},limit=1] Item.tag.new_item set value 0
@@ -28,7 +26,7 @@ execute as @a[scores={Make_Unbreakable=2}] run playsound minecraft:block.end_por
 execute as @a[scores={Make_Unbreakable=0}] run playsound minecraft:entity.wither.ambient block @s
 
 # Display conformation message (Private)
-tellraw @a[scores={Make_Unbreakable=2}] ["",{"text":"[Unbreakable-Items] ","color":"aqua"},{"text":"Made held item unbreakable for 50-levels!","color":"green"}]
+execute run tellraw @a[scores={Make_Unbreakable=2}] ["",{"text":"[Unbreakable-Items] ","color":"aqua"},{"text":"Made held item unbreakable for 50-levels!","color":"green"}]
 
 # Display conformation message (Public)
 tellraw @a[scores={Make_Unbreakable=0}] ["",{"text":"[Unbreakable-Items] ","color":"aqua"},{"selector":"@s","color":"yellow","italic":true},{"text":" has made an item unbreakable for 50 levels!","color":"green"}]

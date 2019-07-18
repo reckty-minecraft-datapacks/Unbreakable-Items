@@ -11,7 +11,7 @@ execute as @a at @s if entity @s[scores={Make_Unbreakable=1}] run function unbre
 execute as @a at @s if entity @s[scores={Make_Unbreakable=3}] run function unbreakable-items:result/already-unbreakable
 
 # Clear place-holders
-execute as @a[scores={Make_Unbreakable=0}] run clear @s minecraft:minecart{tag:{place_holder:0}}
+execute as @a[scores={Make_Unbreakable=0}] at @s run clear @s minecraft:minecart{tag:{place_holder:0}}
 
 # Continue if player is holding a valid item
 execute as @a at @s if entity @s[scores={Make_Unbreakable=2}] run function unbreakable-items:result/success
