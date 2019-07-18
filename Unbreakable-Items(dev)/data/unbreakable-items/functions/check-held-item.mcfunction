@@ -2,10 +2,10 @@
 ## If player is holding a valid item, Make_Unbreakable is set to '2' ##
 #######################################################################
 
-#Check if item's already unbreakable
+# Check if item's already unbreakable
 execute if entity @s[nbt={SelectedItem:{tag:{Unbreakable:1}}}] run scoreboard players set @s Make_Unbreakable 3
 
-#Armor
+# Armor
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_helmet"}}] run scoreboard players set @s Make_Unbreakable 2
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_chestplate"}}] run scoreboard players set @s Make_Unbreakable 2
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_leggings"}}] run scoreboard players set @s Make_Unbreakable 2
@@ -27,7 +27,7 @@ execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:leather_leggings"}}] run scoreboard players set @s Make_Unbreakable 2
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:leather_boots"}}] run scoreboard players set @s Make_Unbreakable 2
 
-#Tools
+# Tools
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run scoreboard players set @s Make_Unbreakable 2
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_shovel"}}] run scoreboard players set @s Make_Unbreakable 2
 execute as @a at @s unless entity @s[scores={Make_Unbreakable=2..}] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] run scoreboard players set @s Make_Unbreakable 2
